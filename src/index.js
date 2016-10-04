@@ -6,6 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 
 import App from './components/app';
 import Resources from './components/resources';
+import Login from './components/login';
 import requireAuth from './components/hoc/require_auth';
 import reducers from './reducers';
 
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <Route path="/resources" component={requireAuth(Resources)} />
+        <Route path="/login" component={Login} />
       </Route>
     </Router>
 

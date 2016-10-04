@@ -11,7 +11,7 @@ export default function(ComposedComponent) {
       const { authenticated } = this.props;
 
       if (!authenticated) {
-        this.context.router.push('/');
+        this.context.router.push('/login');
       }
     }
 
@@ -19,7 +19,7 @@ export default function(ComposedComponent) {
     // page, you will be redirected out.
     componentWillUpdate(nextProps) {
       if (!nextProps.authenticated) {
-        this.context.router.push('/');
+        this.context.router.push('/login');
       }
     }
 
