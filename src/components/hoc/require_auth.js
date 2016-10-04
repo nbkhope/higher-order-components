@@ -9,3 +9,8 @@ export default function(ComposedComponent) {
 
   return Authentication;
 }
+
+// usage:
+//   const ComposedComponent = Authentication(SomeComponent);
+// then, in render:
+//   <ComposedComponent />
